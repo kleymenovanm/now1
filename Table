@@ -1,0 +1,27 @@
+CREATE TABLE dbo.SKU 
+(
+ID indentity INT NOY NULL,
+Code VARCHAR(30) UNIQUE DEFAULT "s"+ID indentity,
+Name VARCHAR(30) NOT NULL
+);
+
+CREATE TABLE dbo.Family
+(
+ID indentity INT NOY NULL,
+SurName VARCHAR(30) UNIQUE,
+BudgetValue INT NOT NULL
+);
+
+CREATE TABLE dbo.Basket
+(
+ID indentity INT NOY NULL,
+ID_SKU VARCHAR(30) UNIQUE,
+ID_Family VARCHAR(30) NOT NULL,
+Quantity INT NOY NULL CHEK Quantity>0, 
+Value INT NOY NULL CHEK Value>0, 
+PurchaseDate date DEFAULT GETDATE(), 
+DiscountValue
+CONSTRAINT PK_Basket
+ PRIMARY KEY(ID_SKU)
+
+);
